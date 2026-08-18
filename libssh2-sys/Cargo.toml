@@ -19,8 +19,8 @@ zlib-ng-compat = ["libz-sys/zlib-ng"]
 openssl-on-win32 = ["openssl-sys"]
 
 [dependencies]
-libc = "0.2"
-libz-sys = { version = "1.1.0", default-features = false, features = ["libc"] }
+libc = "=0.2.189"
+libz-sys = { version = "=1.1.29", default-features = false, features = ["libc"] }
 
 [target."cfg(unix)".dependencies]
 openssl-sys = "0.9.35"
@@ -29,8 +29,8 @@ openssl-sys = "0.9.35"
 openssl-sys = { version="0.9.35", optional = true }
 
 [build-dependencies]
-pkg-config = "0.3.11"
-cc = "1.0.25"
+pkg-config = "=0.3.34"
+cc = "=1.4.3"
 
 [target.'cfg(target_env = "msvc")'.build-dependencies]
 vcpkg = "0.2"
